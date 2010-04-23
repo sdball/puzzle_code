@@ -157,6 +157,27 @@ def pos_neg(a, b, negative):
         return a < 0 and b < 0
     return (a < 0 and b > 0) or (b < 0 and a > 0)
 
+def not_string(str):
+    """
+    Given a string.
+    
+    Return a new string where "not " has been added to the front.
+    
+    However, if the string already begins with "not",
+    return the string unchanged. 
+    
+    >>> not_string('candy')
+    'not candy'
+    >>> not_string('x')
+    'not x'
+    >>> not_string('not bad')
+    'not bad'
+    
+    """
+    if str.startswith('not'):
+        return str
+    return ' '.join(['not', str])
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
