@@ -134,6 +134,29 @@ def near_hundred(n):
     """
     return abs(n - 100) <= 10 or abs(n - 200) <= 10
 
+def pos_neg(a, b, negative):
+    """
+    Given 2 int values.
+    
+    Return True if one is negative and one is positive.
+    
+    Unless the parameter "negative" is True, then they must
+    both be negative.
+    
+    >>> pos_neg(1, -1, False)
+    True
+    >>> pos_neg(-1, 1, False)
+    True
+    >>> pos_neg(1, 1, False)
+    False
+    >>> pos_neg(-1, -1, True)
+    True
+    
+    """
+    if negative:
+        return a < 0 and b < 0
+    return (a < 0 and b > 0) or (b < 0 and a > 0)
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
