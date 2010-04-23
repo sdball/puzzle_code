@@ -116,6 +116,24 @@ def makes10(a, b):
     """
     return 10 in [a,b] or a + b == 10
 
+def near_hundred(n):
+    """
+    Given an int n, return True if it is within 10 of 100 or 200.
+    
+    Note: abs(num) computes the absolute value of a number.
+    
+    >>> near_hundred(93)
+    True
+    >>> near_hundred(90)
+    True
+    >>> near_hundred(89)
+    False
+    >>> near_hundred(201)
+    True
+    
+    """
+    return abs(n - 100) <= 10 or abs(n - 200) <= 10
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
