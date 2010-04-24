@@ -198,6 +198,27 @@ def missing_char(str, n):
     """
     return ''.join([str[:n], str[n+1:]])
 
+def front_back(str):
+    """
+    Given a string.
+    
+    Return a new string where the first and last chars have
+    been exchanged.
+    
+    >>> front_back('code')
+    'eodc'
+    >>> front_back('a')
+    'a'
+    >>> front_back('ab')
+    'ba'
+    >>> front_back('xyzzy')
+    'yyzzx'
+    
+    """
+    if len(str) <= 1:
+        return str
+    return ''.join([str[-1], str[1:-1], str[0]])
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
