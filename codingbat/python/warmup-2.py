@@ -66,6 +66,30 @@ def string_splosion(str):
         chunks.append(str[:i])
     return ''.join(chunks)
 
+def last2(str):
+    """
+    Given a string, return the count of the number of times
+    that a substring length 2 appears in the string and also
+    as the last 2 chars of the string, so "hixxxhi" yields 1
+    (we won't count the end substring). 
+    
+    >>> last2('hixxhi')
+    1
+    >>> last2('xaxxaxaxx')
+    1
+    >>> last2('axxxaaxx')
+    2
+    >>> last2('xxxx')
+    2
+    
+    """
+    seen = 0
+    tail = str[-2:]
+    for n in xrange(len(str) - 2):
+        if str[n:n+2] == tail:
+            seen += 1
+    return seen
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
