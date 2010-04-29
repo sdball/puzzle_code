@@ -61,10 +61,7 @@ def string_splosion(str):
     'aab'
     
     """
-    chunks = []
-    for i in xrange(1, len(str) + 1):
-        chunks.append(str[:i])
-    return ''.join(chunks)
+    return ''.join([str[:i] for i in xrange(1, len(str) + 1)])
 
 def last2(str):
     """
