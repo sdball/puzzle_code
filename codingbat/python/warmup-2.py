@@ -80,12 +80,7 @@ def last2(str):
     2
     
     """
-    seen = 0
-    tail = str[-2:]
-    for n in xrange(len(str) - 2):
-        if str[n:n+2] == tail:
-            seen += 1
-    return seen
+    return len([n for n in xrange(len(str) - 2) if str[n:n+2] == str[-2:]])
 
 if __name__ == '__main__':
     import doctest
