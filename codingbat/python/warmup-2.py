@@ -82,6 +82,20 @@ def last2(str):
     """
     return len([n for n in xrange(len(str) - 2) if str[n:n+2] == str[-2:]])
 
+def array_count9(nums):
+    """
+    Given an array of ints, return the number of 9's in the array. 
+    
+    >>> array_count9([1, 2, 9])
+    1
+    >>> array_count9([1, 9, 9])
+    2
+    >>> array_count9([1, 9, 9, 3, 9])
+    3
+    
+    """
+    return len([n for n in nums if n == 9])
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
