@@ -48,6 +48,24 @@ def string_bits(str):
     """
     return ''.join([str[n] for n in xrange(0, len(str), 2)])
 
+def string_splosion(str):
+    """
+    Given a non-empty string like "Code" return a
+    string like "CCoCodCode". 
+    
+    >>> string_splosion('Code')
+    'CCoCodCode'
+    >>> string_splosion('abc')
+    'aababc'
+    >>> string_splosion('ab')
+    'aab'
+    
+    """
+    chunks = []
+    for i in xrange(1, len(str) + 1):
+        chunks.append(str[:i])
+    return ''.join(chunks)
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
