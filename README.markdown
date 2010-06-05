@@ -1,3 +1,1 @@
-Solutions (or, more likely, solution attempts) for various [Project Euler](http://projecteuler.net/) problems.
-
-Also Coding Bat.
+Solutions to various programming puzzles.
