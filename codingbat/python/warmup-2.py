@@ -112,6 +112,29 @@ def array_front9(nums):
     """
     return 9 in nums[:4]
 
+def array123(nums):
+    """
+    Given an array of ints, return True if it contains [1, 2, 3].
+    
+    >>> array123([1, 1, 2, 3, 1])
+    True
+    >>> array123([1, 1, 2, 4, 1])
+    False
+    >>> array123([1, 1, 2, 1, 2, 3])
+    True
+    >>> array123([1,2,3,1,2,3])
+    True
+    >>> array123([])
+    False
+    >>> array123([3,2,1,3,2,1])
+    False
+    
+    """
+    for i in xrange(len(nums) - 2):
+        if nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3:
+            return True
+    return False
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
