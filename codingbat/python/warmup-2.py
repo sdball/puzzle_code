@@ -149,7 +149,10 @@ def string_match(a, b):
     2
     >>> string_match('abc', 'axc')
     0
-    
+    >>> string_match('aabbccdd', 'abbbxxd')
+    1
+    >>> string_match('aaxxaaxx', 'iaxxai')
+    3
     """
     a_chunks = [[a[i], a[i+1]] for i in xrange(len(a) - 1)]
     b_chunks = [[b[i], b[i+1]] for i in xrange(len(b) - 1)]
