@@ -151,7 +151,9 @@ def string_match(a, b):
     0
     
     """
-    pass
+    a_chunks = [[a[i], a[i+1]] for i in xrange(len(a) - 1)]
+    b_chunks = [[b[i], b[i+1]] for i in xrange(len(b) - 1)]
+    return len([c for c in a_chunks if c in b_chunks])
 
 if __name__ == '__main__':
     import doctest
