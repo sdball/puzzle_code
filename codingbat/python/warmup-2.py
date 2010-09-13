@@ -130,10 +130,7 @@ def array123(nums):
     False
     
     """
-    for i in xrange(len(nums) - 2):
-        if nums[i] == 1 and nums[i+1] == 2 and nums[i+2] == 3:
-            return True
-    return False
+    return (1,2,3) in zip(nums, nums[1:], nums[2:])
 
 def string_match(a, b):
     """
