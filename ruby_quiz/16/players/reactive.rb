@@ -1,4 +1,10 @@
 class Reactive < Player
+  MOVE_THAT_BEATS = {
+    rock: :paper,
+    paper: :scissors,
+    scissors: :rock
+  }
+
   def initialize(opponent)
     @my_move = :paper
   end
@@ -8,18 +14,7 @@ class Reactive < Player
   end
 
   def result(my_move, opponent_move, outcome)
-    @my_move = winning_move(opponent_move)
-  end
-
-  def winning_move(move)
-    case move
-    when :rock
-      :paper
-    when :paper
-      :scissors
-    when :scissors
-      :rock
-    end
+    @my_move = MOVE_THAT_BEATS[opponent_move]
   end
 
 end
