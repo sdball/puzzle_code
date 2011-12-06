@@ -3,7 +3,7 @@ Ruby Quiz: Paper Rock Scissors (#16)
 
 [Original Ruby Quiz #16 instructions](http://www.rubyquiz.com/quiz16.html)
 
-The puzzle is simple, but offers a surprisingly fun amount of depth; especially
+This quiz is simple, but offers a surprisingly fun amount of depth; especially
 when you allow the possibility of players that manipulate each other or the game
 itself. :-)
 
