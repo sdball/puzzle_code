@@ -46,8 +46,8 @@ run with player files or a directory of player files as an argument.
 
     $ ruby -I . rock_paper_scissors.rb players
 
-Unusual Suspects
-================
+My Players
+==========
 
 Cheater
 -------
